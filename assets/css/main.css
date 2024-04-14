@@ -198,26 +198,38 @@ section {
 }
 
 #preloader:before {
-  content: "";
+  content: "M K S V";
+  font-size: 24px;
+  font-weight: bold;
   position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid var(--color-primary);
-  border-top-color: #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
+  top: calc(50% - 12px);
+  left: calc(50% - 60px);
+  color: var(--color-primary);
 }
 
 @keyframes animate-preloader {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
-
+  25% {
+    transform: scale(1.7); /* Scale the first letter */
+  }
+  50% {
+    transform: scale(1); /* Scale back to normal */
+  }
+  50.1% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.7); /* Scale the second letter */
+  }
   100% {
-    transform: rotate(360deg);
+    transform: scale(1); /* Scale back to normal */
   }
+}
+
+#preloader:before {
+  animation: animate-preloader 8s linear infinite; /* Adjust the timing to control the animation */
 }
 
 /*--------------------------------------------------------------
