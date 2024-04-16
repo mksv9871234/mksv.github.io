@@ -651,6 +651,32 @@ section {
   font-size: 14px;
 }
 
+
+/* why choose us section */
+
+.whychoosecards div{
+  padding: 10px;
+  border: 1px solid black;
+  margin: 10px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+.whychoosecards div img{
+  width: 100px;
+}
+.whychoosecards div:hover{
+  background-color: rgb(60, 60, 239);
+  color: white;
+}
+
+/* End why choose us */
+
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
